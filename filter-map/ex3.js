@@ -68,4 +68,6 @@ function getStudentsPerCurriculum(campuses, curriculumName) {
     return solution;
 }
 
+
+
 module.exports = getStudentsPerCurriculum;
