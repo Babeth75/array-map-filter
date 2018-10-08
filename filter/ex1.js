@@ -12,6 +12,12 @@ Sortie attendue:
  */
 
 function getPositiveNumbers(numbers) {
+	numbersPositifOrNul = numbers.filter(function(listNumbersPos){
+			
+		return listNumbersPos >= 0;
+		
+	});
+	return numbersPositifOrNul;
 }
 
 // Si besoin, tu peux toujours visualiser le résultat avec console.log,

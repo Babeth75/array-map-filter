@@ -25,6 +25,25 @@ Sortie attendue:
 */
 
 function getCampusesTeachingReact(campuses) {
+	const tabTechno = campuses.filter(function(getTechno){
+		if(getTechno.curriculums.includes('JS/React'))
+			return getTechno;
+	});
+	const tabCampus = tabTechno.map(function(getCampus){
+		return getCampus.city;
+	})
+	return tabCampus;
 }
+
+/*const campuses = [
+  { city: 'Bordeaux', curriculums: ['PHP/Symfony', 'JS/React'] },
+  { city: 'La Loupe', curriculums: ['JS/Angular'] },
+  { city: 'Lille', curriculums: ['PHP/Symfony', 'JS/React'] },
+  { city: 'Marseille', curriculums: ['JS/React'] },
+  { city: 'Orléans', curriculums: ['PHP/Symfony'] },
+  { city: 'Reims', curriculums: ['JS/React'] },
+  { city: 'Toulouse', curriculums: ['JEE/Android', 'JS/React'] }
+];
+console.log(getCampusesTeachingReact(campuses));*/
 
 module.exports = getCampusesTeachingReact;

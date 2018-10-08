@@ -21,7 +21,11 @@ En sortie: [
 
  */
 
-function getStringsLength(strings) {
+ function getStringsLength(strings) {
+  const newTab = strings.map(function(tutu){
+   return tutu + " contains " + tutu.length + " characters";
+ });
+  return newTab;
 }
 
 // Si besoin, tu peux toujours visualiser le résultat avec console.log,

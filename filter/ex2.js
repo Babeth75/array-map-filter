@@ -16,6 +16,12 @@ Exemple d'entrée:
  */
 
 function getMultiplesOf(numbers, n) {
+	const multiple = numbers.filter(function(multipleList){
+		while(multipleList % n == 0){
+			return multipleList;
+		}	
+	});
+	return multiple;
 }
 
 // Ne pas modifier l'export

@@ -39,6 +39,11 @@ Exemple d'entrée:
  */
 
 function searchWordFilter(items, search) {
+  const tabSearch = items.filter(function(searchItems){
+    if(searchItems.toLowerCase().includes(search.toLowerCase())) //Je mets tout en minuscule
+      return searchItems;
+  });
+  return tabSearch;
 }
 
 // Ne pas modifier l'export

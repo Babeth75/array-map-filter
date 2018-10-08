@@ -50,10 +50,23 @@ Tableau de sortie correspondant (toFixed transforme les nombres en chaînes)
   }
 ]
 */
-
 function getCirclesProperties(radiuses) {
+
+  const tabCircle = radiuses.map(function(radius){
+
+    let circumference = (2 * Math.PI * parseInt(radius)).toFixed(3);
+    
+    let surface = (Math.PI * parseInt(radius) * parseInt(radius)).toFixed(3);
+
+    return {radius,circumference,surface};
+  });
+  //console.log(tabCircle);
+  return tabCircle;
 }
 
+// const radiuses =[1, 3, 4.5, 7];
+
+// console.log(getCirclesProperties(radiuses));
 
 
 // Ne pas modifier l'export
